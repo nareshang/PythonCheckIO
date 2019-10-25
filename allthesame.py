@@ -10,9 +10,7 @@ def all_the_same(elements: List[Any]) -> bool:
         if iElem != elem:
             return False
 
-    # Other solution
-    #if len(elements) <= 0:
-    #    return True
+    # Other solution    
     #test = all(elem == elements[0] for elem in elements)
     return True
 
