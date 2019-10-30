@@ -1,18 +1,18 @@
 import re
 def checkio(data: str) -> bool:
     lenstr = len(data)
-    if lenstr < 10:
-        return False
     flag = False
-    found = re.search(r"^[a-zA-Z0-9]+$", data)
-    if found:
-        found = re.search(r"[a-z]+", data)
+    
+    if lenstr >= 10 and lenstr <= 64:        
+        found = re.search(r"^[a-zA-Z0-9]+$", data)
         if found:
-            found = re.search(r"[A-Z]+", data)
-            if found:            
-                found = re.search(r"[0-9]+", data)
-                if found:
-                    flag = True
+            found = re.search(r"[a-z]+", data)
+            if found:
+                found = re.search(r"[A-Z]+", data)
+                if found:            
+                    found = re.search(r"[0-9]+", data)
+                    if found:
+                        flag = True
     return flag
 
 #Some hints
